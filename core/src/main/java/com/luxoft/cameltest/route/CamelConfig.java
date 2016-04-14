@@ -34,10 +34,4 @@ public class CamelConfig {
         brokerService.start();
     }
 
-
-    @Bean
-    @Qualifier(value = "handler")
-    public Handler handler() {
-        return new Handler();
-    }
 }
