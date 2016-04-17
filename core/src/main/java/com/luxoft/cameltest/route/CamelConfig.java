@@ -4,7 +4,7 @@ import org.apache.activemq.broker.BrokerService;
 import org.apache.activemq.broker.TransportConnector;
 import org.apache.activemq.camel.component.ActiveMQComponent;
 import org.apache.camel.Endpoint;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.apache.camel.spring.javaconfig.CamelConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +14,7 @@ import java.net.URI;
 
 @Configuration
 @ComponentScan
-public class CamelConfig {
+public class CamelConfig extends CamelConfiguration {
 
     @Bean
     public ActiveMQComponent activeMQComponent() {
